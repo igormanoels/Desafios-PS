@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conversor Romano-Arábico</title>
+  <script src="teste1-conversor.js"></script>
+</head>
+<body>
+  <h1>Conversor Romano-Arábico</h1>
+  <input type="text" id="numeroRomano" placeholder="Digite um número romano">
+  <button onclick="converterRomanoParaArabico()">Converter para Arábico</button>
+  <br>
+  <input type="number" id="numeroArabico" placeholder="Digite um número arábico">
+  <button onclick="converterArabicoParaRomano()">Converter para Romano</button>
+  <br>
+  <p id="resultado"></p>
+
+  <script>
+    function converterRomanoParaArabico() {
+      var numeroRomano = document.getElementById('numeroRomano').value;
+      var numeroArabico = romanoParaArabico(numeroRomano);
+      document.getElementById('resultado').innerHTML = "O número arábico correspondente é: " + numeroArabico;
+    }
+
+    function converterArabicoParaRomano() {
+      var numeroArabico = document.getElementById('numeroArabico').value;
+      var numeroRomano = arabicoParaRomano(parseInt(numeroArabico));
+      document.getElementById('resultado').innerHTML = "O número romano correspondente é: " + numeroRomano;
+    }
+  </script>
+</body>
+</html>
